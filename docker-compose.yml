@@ -17,7 +17,7 @@ services:
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: your_database
+      MYSQL_DATABASE: twitterdb
     ports:
       - "3306:3306"
     volumes:
