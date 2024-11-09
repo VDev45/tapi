@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "5d801efe-7418-4182-ab94-2ef0f6fd8976",
+		"name": "Tweet Operation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32407602"
+	},
+	"item": [
+		{
+			"name": "home posts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "user1",
+						"username": "vishwa1"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "localhost:8080/home"
+			},
+			"response": []
+		},
+		{
+			"name": "myposts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "user1",
+						"username": "vishwa1"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/home/myposts"
+			},
+			"response": []
+		},
+		{
+			"name": "post tweet",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "ajith1",
+						"password": "user1"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tweetContent",
+							"value": "i am ajith",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "hashtags",
+							"value": "#trending",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:8080/home"
+			},
+			"response": []
+		},
+		{
+			"name": "delete tweet",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "ajith1",
+						"password": "user1"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/home/12"
+			},
+			"response": []
+		},
+		{
+			"name": "post comment",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "vishwa1",
+						"password": "user1"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "commentContent",
+							"value": "hi ajith",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:8080/home/13/comment"
+			},
+			"response": []
+		},
+		{
+			"name": "delete comment",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "user1",
+						"username": "vijay1"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/home/5/comment"
+			},
+			"response": []
+		},
+		{
+			"name": "post like",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "vishwa1",
+						"password": "user1"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/home/13/like"
+			},
+			"response": []
+		},
+		{
+			"name": "dislike",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "user1",
+						"username": "vishwa1"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "localhost:8080/home/12/dislike"
+			},
+			"response": []
+		}
+	]
+}

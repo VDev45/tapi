@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "c39af108-ac77-413b-9acb-bc68d339b5e6",
+		"name": "User Operatiojns",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32407602"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "ajith1",
+							"type": "text"
+						},
+						{
+							"key": "userName",
+							"value": "Vishwa Ravi",
+							"type": "text"
+						},
+						{
+							"key": "userEmail",
+							"value": "vishwa@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "userDob",
+							"value": "2004-07-28",
+							"type": "text"
+						},
+						{
+							"key": "userPasswd",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "profile",
+							"type": "file",
+							"src": "/home/vishwa/Downloads/ajith.jpeg"
+						},
+						{
+							"key": "banner",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": "localhost:8080/register"
+			},
+			"response": []
+		},
+		{
+			"name": "update User",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "vishwa1",
+						"password": "user1"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "userName",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "userEmail",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "userDob",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "profile",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						},
+						{
+							"key": "banner",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": "localhost:8080/vishwa1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "ajith1",
+						"password": "user1"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userPasswd",
+							"value": "user1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:8080/ajith1"
+			},
+			"response": []
+		},
+		{
+			"name": "getting user info",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "user1",
+						"username": "vishwa1"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/ajith1"
+			},
+			"response": []
+		},
+		{
+			"name": "follow",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "vishwa1",
+						"password": "user1"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "localhost:8080/ajith1/follow"
+			},
+			"response": []
+		},
+		{
+			"name": "unfollow",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "user1",
+						"username": "vishwa1"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "localhost:8080/ajith1/unfollow"
+			},
+			"response": []
+		}
+	]
+}
